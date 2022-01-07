@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+void allicebob(int arr1[], int arr2[], int n, int m)
+{
+    int allice = 0;
+    int bob = 0;
+    int i = 0;
+    int j = 0;
+    while (i < n && j < m)
+    {
+        if (arr1[i] > arr2[j])
+        {
+            allice++;
+            i++;
+            j++;
+        }
+        else if (arr2[j] > arr1[i])
+        {
+            bob++;
+            i++;
+            j++;
+        }
+        else if (arr1[i] == arr2[j])
+        {
+            i++;
+            j++;
+        }
+    }
+    cout << allice << " " << bob << endl;
+}
+void input2(int arr2[], int m)
+{
+    for (int j = 0; j < m; j++)
+    {
+        cin >> arr2[j];
+    }
+}
+void input1(int arr1[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr1[i];
+    }
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int arr1[n];
+    int m;
+    cin >> m;
+    int arr2[m];
+    input1(arr1, n);
+    input2(arr2, m);
+    allicebob(arr1, arr2, n, m);
+}
