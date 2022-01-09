@@ -20,7 +20,7 @@ int reverse(int arr[], int n, int key)
             e = mid - 1;
         }
     }
-    return e;
+    return s;
 }
 void inputArrays(int arr[], int n)
 {
