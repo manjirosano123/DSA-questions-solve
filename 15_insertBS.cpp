@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int no_of_roatations(int arr[] , int n , int target){
+int insert(int arr[] , int n , int target){
     int s = 0;
     int e = n - 1;
     while(s < e){
@@ -25,5 +25,5 @@ int main(){
     cin>>target;
     int arr[n];
     input(arr , n );
-    cout<<no_of_roatations(arr , n ,target);
+    cout<<insert(arr , n ,target);
 }
